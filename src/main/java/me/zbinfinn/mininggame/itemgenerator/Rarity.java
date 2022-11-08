@@ -6,10 +6,11 @@ public enum Rarity {
     RARE("#71eef5","RARE"),
     EPIC("#a84ccf","EPIC"),
     LEGENDARY("#ffb300","LEGENDARY"),
-    MYTHIC("#0e87eb","MYTHIC");
+    MYTHIC("#0e87eb","MYTHIC"),
+    SUPREME("#FF0000","SUPREME");
 
-    public String colorCode;
-    public String name;
+    public final String colorCode;
+    public final String name;
 
     Rarity(String colorCode, String name) {
         this.colorCode = colorCode;

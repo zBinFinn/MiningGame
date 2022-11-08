@@ -2,6 +2,7 @@ package me.zbinfinn.mininggame.itemgenerator.itemdatatypes;
 
 import me.zbinfinn.mininggame.itemgenerator.Rarity;
 import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 public class BaseItemDataBuilder {
     private Rarity rarity = Rarity.COMMON;
@@ -9,15 +10,15 @@ public class BaseItemDataBuilder {
     private String[] lore = null;
     private int breakingPower = 0;
     private double miningSpeed = 0;
-    private Material material = null;
+    private ItemStack itemStack = null;
 
     public BaseItemData build() {
-        return new BaseItemData(rarity, name, lore, breakingPower, miningSpeed, material);
+        return new BaseItemData(rarity, name, lore, breakingPower, miningSpeed, itemStack);
 
     }
 
-    public BaseItemDataBuilder setMaterial(Material material) {
-        this.material = material;
+    public BaseItemDataBuilder setItemStack(ItemStack itemStack) {
+        this.itemStack = itemStack;
         return this;
     }
 
@@ -47,6 +48,8 @@ public class BaseItemDataBuilder {
     }
 
 
-
-
+    public BaseItemDataBuilder setMaterial(Material material) {
+        itemStack = new ItemStack(material);
+        return this;
+    }
 }
