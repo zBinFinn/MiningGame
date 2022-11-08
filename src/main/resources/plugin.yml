@@ -1,0 +1,8 @@
+name: MiningGame
+version: '${project.version}'
+main: me.zbinfinn.mininggame.Main
+api-version: 1.19
+commands:
+  give:
+    description: Gives the player an item specified by the first argument.
+    aliases: get
