@@ -14,6 +14,4 @@ public class ItemUtil {
         meta.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
         return meta;
     }
-
-
 }

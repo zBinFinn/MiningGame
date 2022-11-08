@@ -10,16 +10,27 @@ public class BaseItemData {
     private final int breakingPower;
     private final double miningSpeed;
     private final ItemStack baseItem;
+    private final int value;
+    private final String id;
 
-    public BaseItemData(Rarity rarity, String name, String[] lore, int breakingPower, double miningSpeed, ItemStack baseItem) {
+    public BaseItemData(Rarity rarity, String name, String[] lore, int breakingPower, double miningSpeed, ItemStack baseItem, int value, String id) {
         this.rarity = rarity;
         this.name = name;
         this.lore = lore;
         this.breakingPower = breakingPower;
         this.miningSpeed = miningSpeed;
         this.baseItem = baseItem;
+        this.value = value;
+        this.id = id;
     }
 
+    public String getID() {
+        return id;
+    }
+
+    public int getValue() {
+        return value;
+    }
 
     public Rarity getRarity() {
         return rarity;

@@ -17,7 +17,6 @@ public class GiveCommand implements CommandExecutor {
             return false;
 
         Player player = (Player) sender;
-
         if (BaseItem.contains(args[0])) {
             player.getInventory().addItem(ItemGenerator.generateItem(BaseItem.valueOf(args[0]).itemData, null));
         } else {

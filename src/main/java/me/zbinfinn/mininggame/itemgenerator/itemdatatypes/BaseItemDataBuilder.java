@@ -11,10 +11,21 @@ public class BaseItemDataBuilder {
     private int breakingPower = 0;
     private double miningSpeed = 0;
     private ItemStack itemStack = null;
+    private int value = 0;
+    private String id;
 
     public BaseItemData build() {
-        return new BaseItemData(rarity, name, lore, breakingPower, miningSpeed, itemStack);
+        return new BaseItemData(rarity, name, lore, breakingPower, miningSpeed, itemStack, value, id);
+    }
 
+    public BaseItemDataBuilder setID(String id) {
+        this.id = id;
+        return this;
+    }
+
+    public BaseItemDataBuilder setValue(int value) {
+        this.value = value;
+        return this;
     }
 
     public BaseItemDataBuilder setItemStack(ItemStack itemStack) {

@@ -8,9 +8,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 public enum BaseItem {
-    GOD_FISH(new BaseItemDataBuilder().setMaterial(Material.COD).setRarity(Rarity.LEGENDARY).setName("God Fish").setLore(new String[]{"Cool Fish that likes", "To eat your toes"}).build()),
-    HOT_FISH(new BaseItemDataBuilder().setMaterial(Material.TROPICAL_FISH).setRarity(Rarity.MYTHIC).setName("Hot Fish").setLore(new String[]{"Hot Fish that likes","To be hot"}).build()),
-    ADMIN_DRILL(new BaseItemDataBuilder().setItemStack(getItemStack("ADMIN_DRILL")).setRarity(Rarity.SUPREME).setName("Admin Drill").setMiningSpeed(100).setBreakingPower(5).build());
+    GOD_FISH(new BaseItemDataBuilder().setID("GOD_FISH").setMaterial(Material.COD).setRarity(Rarity.LEGENDARY).setName("God Fish").setLore(new String[]{"Cool Fish that likes", "To eat your toes"}).build()),
+    HOT_FISH(new BaseItemDataBuilder().setID("HOT_FISH").setMaterial(Material.TROPICAL_FISH).setRarity(Rarity.MYTHIC).setName("Hot Fish").setLore(new String[]{"Hot Fish that likes","To be hot"}).setValue(100).build()),
+    ADMIN_DRILL(new BaseItemDataBuilder().setID("ADMIN_DRILL").setItemStack(getItemStack("ADMIN_DRILL")).setRarity(Rarity.SUPREME).setName("Admin Drill").setMiningSpeed(100).setBreakingPower(5).build());
 
     private static ItemStack getItemStack(String id) {
         switch(id) {

@@ -6,3 +6,4 @@ commands:
   give:
     description: Gives the player an item specified by the first argument.
     aliases: get
+  test:

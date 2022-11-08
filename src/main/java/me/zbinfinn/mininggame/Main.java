@@ -1,9 +1,16 @@
 package me.zbinfinn.mininggame;
 
+import it.unimi.dsi.fastutil.Hash;
 import me.zbinfinn.mininggame.commands.GiveCommand;
+import me.zbinfinn.mininggame.events.PlayerLeftClickEvent;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.HashMap;
+
 public final class Main extends JavaPlugin {
+    public static Main PLUGIN_INSTANCE;
+    public HashMap<String, >
 
     @Override
     public void onEnable() {
@@ -11,6 +18,8 @@ public final class Main extends JavaPlugin {
 
         initializeEvents();
         initializeCommands();
+
+        PLUGIN_INSTANCE = this;
 
         System.out.println("[Mining Game] done.");
 
@@ -21,11 +30,13 @@ public final class Main extends JavaPlugin {
     }
 
     private void initializeEvents() {
-
+        PluginManager pm = getServer().getPluginManager();
+        pm.registerEvents(new PlayerLeftClickEvent(), this);
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
     }
+
 }
